@@ -18,7 +18,7 @@
     "ethers": "^5.7.2",
     "hardhat": "^2.19.0",
     "hardhat-deploy": "^0.11.43",
-    "hardhat-gas-reporter": "^1.0.9",
+    "hardhat-gas-reporter": "^1.0.10",
     "solhint": "^4.0.0",
     "solhint-plugin-prettier": "^0.1.0",
     "solidity-coverage": "^0.8.5",

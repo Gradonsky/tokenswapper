@@ -1,0 +1,25 @@
+name: Solidity Solhint Check
+on: [push]
+
+jobs:
+  lint:
+    strategy:
+      fail-fast: true
+
+    name: Solhint linter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Install Node LTV version
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.10.0'
+
+      - name: Install solhint
+        run: npm install -g solhint@4.0.0
+
+      - name: Run solhint
+        run: solhint 'contracts/*.sol'
